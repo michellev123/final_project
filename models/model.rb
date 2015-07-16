@@ -12,9 +12,10 @@ class Packer
   end
   
   def add_activity
-    @activities.each do |activity, objects|
-      @sentences+="\n #{@sentence_hash[activity, objects]}"
+    @activities.each do |activity|
+      @sentences+=" \n #{@sentence_hash[activity]}"
       end 
+  return @sentences 
   end
 end
 
