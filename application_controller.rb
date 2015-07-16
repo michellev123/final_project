@@ -6,7 +6,7 @@ require './models/model.rb'
 class MyApp < Sinatra::Base
 
   get '/' do
-    erb :final_index
+    erb :index
   end
   
     
