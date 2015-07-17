@@ -12,10 +12,11 @@ class Packer
   end
   
   def add_activity
+    sentences_array = []
     @activities.each do |activity|
-      @sentences+=" \n #{@sentence_hash[activity]}"
+      sentences_array.push("#{@sentence_hash[activity]}")
       end 
-  return @sentences 
+  return sentences_array 
   end
 end
 

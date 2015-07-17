@@ -13,7 +13,7 @@ class MyApp < Sinatra::Base
     post '/results' do
    
       
-      sentence_hash = { "Swimming"=>"For swimming, bring: bathing suit, sunglasses, flipflops.", 
+      sentence_hash =  { "Swimming"=>"For swimming, bring: bathing suit, sunglasses, flipflops.", 
         "Work"=>"For work, bring: work phone, laptop, laptop charger, business cards.", 
         "Beach"=>"For the beach, bring: sunblock, sunglasses, bathing suit, towel, hat, sandals.",
         "Hiking"=>"For hiking, bring: sneakers or hiking boots, socks (not cotton), water bottle, hat, insect repellant, first aid kit, t-shirt.", 
@@ -24,7 +24,7 @@ class MyApp < Sinatra::Base
         packer1 = Packer.new(params[:traveldestination], params[:dates], params[:dates] * 1, params[:activities], sentence_hash)
       
       @part1 = packer1.sentences
-      @part2 = packer1.add_activity
+      @pack_array = packer1.add_activity
       erb :results
             
   end 
